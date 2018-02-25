@@ -1,0 +1,48 @@
+.ra-form {
+    display: block;
+    max-width: 1000px;
+    @media screen and (min-width: 900px) {
+        display: flex;
+    }
+    & > div {
+        width: 100%;
+        @media screen and (min-width: 900px) {
+            width: 50%;
+        }
+    }
+    &__inputs {
+        padding-right: 20px;
+    }
+    & input {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        padding: 8px 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-weight: 300;
+    }
+
+    & textarea {
+        display: block;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        resize: none;
+        height: 128px;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        width: 100%;
+        font-weight: 300;
+    }
+    
+    
+}
+form button {
+    margin-top: 8px;
+    border: 0;
+    background-color: #232323;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+}

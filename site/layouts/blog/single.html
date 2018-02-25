@@ -1,0 +1,16 @@
+{{ $t := (print "Roza Azora: " .Title) }}
+{{ partial "head" (dict "title" $t "description" .Description "image" .Params.image )}}
+<div class="xs-only-visible">
+  {{ partial "ra-site-menu" . }}
+  {{ partial "r2-menu-btn" . }}
+</div>
+
+{{ partial "ra-sticky-menu" . }}
+<div class="blog-post">
+  <h1>{{ .Title}}</h1>
+  <p>{{ .Description}}</p>
+  <img src="{{ .Params.image }}">
+  {{ .Content }}
+  <a href="/blog" class="post__read-more">←</a>
+</div>
+{{ partial "footer" . }}

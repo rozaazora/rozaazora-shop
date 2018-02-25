@@ -1,0 +1,47 @@
+.ra-footer {
+    display: block;
+    flex-direction: row;
+    min-height: 400px;
+    background-color: #232323;
+    color: var(--catskill-white);
+    box-sizing: border-box;
+    padding: 80px 0 1px;
+    @media screen and (min-width: 900px) {
+        display: flex;
+        padding: 80px 120px;
+    }
+    &__col {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 60px;
+        @media screen and (min-width: 900px) {
+            width: 33.33%;
+        }
+        & a {
+            color: #fff;
+            text-decoration: underline;
+            opacity: 1;
+            transition: opacity 0.4s;
+            &:hover {
+                border: 0;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__socials {
+        margin-top: 30px;
+        & a {
+            display: inline-block;
+            opacity: 1;
+            transition: opacity 0.4s;
+            margin-right: 8px;
+            &:hover {
+                opacity: 0.6;
+                border: 0;
+                
+            }
+        }
+    }
+}
