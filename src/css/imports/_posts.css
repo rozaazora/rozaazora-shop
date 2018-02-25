@@ -1,0 +1,116 @@
+.posts {
+    &__container {
+        background-color: var(--catskill-white);
+        
+        padding: 80px 0 1px;
+        @media screen and (min-width: 900px) {
+            padding-top: 40px;
+            padding: 0 120px;
+        }
+    }
+
+    &__ul {
+        margin: 0;
+        list-style: none;
+        display: block;
+        padding-bottom: 40px;
+
+        @media screen and (min-width: 900px) {
+            padding-left: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+    }
+
+    &__li {
+        padding: 0 50px;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        background-color: var(--catskill-white);
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        transition: transform 0.4s;
+        padding-bottom: 92px;
+        margin-bottom: 40px;
+        @media screen and (min-width: 900px) {
+            width: calc(33.33% + 35px);
+            margin-left: -40px;
+        }
+        &:hover {
+            box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
+            background-color: #fff;
+            transform: scale(1.02);
+            z-index: 2;
+        }
+    }
+}
+
+.post {
+    & h2 {
+        font-size: 1rem;
+        & a {
+            font-size: inherit;
+            color: inherit;
+            font-family: inherit;
+
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+    & time {
+        font-size: 0.5rem;
+        letter-spacing: 3px;
+        color: var(--silver-chalice);
+    }
+
+    & img {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+        @media screen and (min-width: 900px) {
+            max-width: 700px;
+        }
+    }
+    & .post__short-content {
+        display: block;
+        line-height: 1.7;
+        padding: 0.5rem 0;
+        width: 100%;
+        color: var(--bastilie);
+        &:hover {
+            border: 0;
+        }
+        @media screen and (min-width: 900px) {
+            max-width: 1000px;
+        }
+    }
+
+    &__read-more {
+        font-size: 1.5rem;
+        padding: 0 16px;
+        display: block;
+        width: 60px;
+        margin-right: auto;
+        border: 0;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #dedede;
+        color: #666;
+        border-bottom: 1px solid #dedede;
+        &:hover {
+            border-bottom-color: var(--bastilie);
+            color: var(--bastilie);
+        }
+
+        &:active {
+            background-color: #dedede;
+            color: var(--silver-chalice);
+        }
+    }
+}

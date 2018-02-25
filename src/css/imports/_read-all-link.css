@@ -1,0 +1,28 @@
+.read-all-link {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    @media screen and (min-width: 900px) {
+        text-align: right;
+        padding-bottom: 0px;
+        border: 0;
+    }
+    & a {
+        color: #666;
+        margin-right: 10px;
+        border-bottom: 1px solid transparent;
+        font-size: 20px;
+        @media screen and (min-width: 900px) {
+            font-size: .6rem;
+        }
+        &:hover {
+            color: var(--bastilie);
+            border-bottom-color: var(--bastilie);
+        }
+        &:active {
+            color: var (--silver-chalice);
+        }
+    }
+}

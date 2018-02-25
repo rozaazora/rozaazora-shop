@@ -1,0 +1,28 @@
+.ra-section-title {
+    text-align: center;
+    font-size: 0;
+    @media screen and (min-width: 900px) {
+        margin-bottom: 42px;
+    }
+    & a, & span {
+        font-size: 32px;
+        display: inline-block;
+        color: #666;
+        padding:  0 25px 13px;
+        border-bottom: 1px solid #666;
+
+        &:hover {
+            color: var(--bastilie);
+            border-bottom: 1px solid var(--bastilie);
+        }
+
+        &:active {
+            color: var(--silver-chalice);
+        }
+    }
+    & span {
+        color: var(--bastilie);
+        border-bottom: 1px solid var(--bastilie);
+        pointer-events: none;
+    }
+}

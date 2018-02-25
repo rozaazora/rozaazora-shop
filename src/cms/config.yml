@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: <% GITHUB_REPOSITORY %> # Gulp will replace this with your GitHub repository
+  branch: master # Branch to update (master by default)
+
+media_folder: "site/static/images/uploads" # Folder where user uploaded files should go
+public_folder: "/images/uploads"
+pluralizelisttitles: false
+paginate: 4
+paginatePath: "page"
+collections: # A list of collections the CMS should be able to edit
+  - name: "blog"
+    label: "Публикации"
+    folder: "site/content/blog"
+    create: true
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Подзаголовок", name: "subtitle", widget: "string"}
+      - {label: "Дата публиуации", name: "date", widget: "datetime"}
+      - {label: "Вводное описание", name: "description", widget: "text"}
+      - {label: "Изображение", name: "image", widget: "image", required: false}
+      - {label: "Содержимое", name: "body", widget: "markdown"}
+  - name: "events"
+    label: "Анонсы"
+    folder: "site/content/events"
+    create: true
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Подзаголовок", name: "subtitle", widget: "string"}
+      - {label: "Дата публиуации", name: "date", widget: "datetime"}
+      - {label: "Дата и время начала", name: "eventStartDate", widget: "datetime"}
+      - {label: "Дата и время окончания", name: "eventEndDate", widget: "datetime"}
+      - {label: "Краткое описание", name: "description", widget: "text"}
+      - {label: "Изображение", name: "image", widget: "image", required: false}
+      - {label: "Содержимое", name: "body", widget: "markdown"}
+  - name: "courses"
+    label: "Курсы"
+    folder: "site/content/courses"
+    create: true
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Подзаголовок", name: "subtitle", widget: "string"}
+      - {label: "Дата публиуации", name: "date", widget: "datetime"}
+      - {label: "Дата и время начала", name: "eventStartDate", widget: "datetime"}
+      - {label: "Дата и время окончания", name: "eventEndDate", widget: "datetime"}
+      - {label: "Краткое описание", name: "description", widget: "text"}
+      - {label: "Изображение", name: "image", widget: "image", required: false}
+      - {label: "Содержимое", name: "body", widget: "markdown"}
+  - name: "galery"
+    label: "Галерея"
+    folder: "site/content/galery"
+    create: true
+    fields:
+      - {label: "Название альбома", name: "title", widget: "string"}
+      - {label: "Описание альбома", name: "description", widget: "string"}
+      - {label: "Дата публиуации", name: "date", widget: "datetime"}
+      - label: "Теги"
+        name: "albumtags"
+        widget: "list"
+        fields:
+          - {label: "Тег", name: "albumtag", widget: "string"}
+      - label: "Медиа контент"
+        name: "item"
+        widget: "list"
+        fields:
+          - {label: "Заголовок", name: "name", widget: "string"}
+          - {label: "Изображение", name: "image", widget: "image", required: false}
+          - {label: "Видео", name: "vid", pattern: /^youtube (\S+)$/, required: false}
+          - label: "Тег"
+            name: "tags"
+            widget: "list"
+            fields:
+              - {label: "Тег", name: "tag", widget: "string"}
+
